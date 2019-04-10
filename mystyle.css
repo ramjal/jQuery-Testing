@@ -1,0 +1,45 @@
+p {
+    cursor: pointer;
+}
+
+.one {
+    position: absolute;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 500px;
+    height: 60px;
+}
+
+rect {
+    cursor: pointer;
+}
+
+text {
+    cursor: pointer;
+}
+
+svg text::selection {
+    background: none;
+}
+
+div.dblClick {
+    user-select: none;
+    cursor: pointer;
+}
+
+p.up {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+    user-select: none;
+}
+
+div.down {
+    padding: 50px;
+    display: none;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}

@@ -6,35 +6,11 @@
     <title>Demo</title>
     <!-- <script src="jquery.js"></script> -->
     <!-- Below is loading jQuery from a CDN (content delivery network) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <style>
-        p {
-            cursor: pointer;
-        }
-
-        .one {
-            position: absolute;
-            float: left;
-            margin-top: 10px;
-            margin-left: 10px;
-            width: 500px;
-            height: 60px;
-        }
-
-        rect {
-            cursor: pointer;
-        }
-
-        text {
-            cursor: pointer;
-        }
-
-        svg text::selection {
-            background: none;
-        }
-    </style>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="myjquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 
 </head>
 
@@ -45,39 +21,29 @@
     </div>
     <hr>
     <div>
-        <svg height="400" width="500">
-            <text class="msgBox" x="100" y="170" fill="red">Click on me!</text>
-            <rect x="20" y="100" width="400" height="100"
+        <svg height="170" width="500">
+            <text class="msgBox" x="50" y="105" fill="red">Please click here to see mouse positions!</text>
+            <rect x="10" y="50" width="400" height="100"
                 style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
         </svg>
     </div>
-    <script>
+    
+    <div class="dblClick">Double Click Me!</div>
+    
+    <hr>
 
-        $(document).ready(function () {
-            $("rect").click(function (event) {
-                //alert( `Thanks for visiting! - mouse x,y (${event.clientX},${event.clientY})`);
-                var msg = `Thanks for the click! - mouse x,y (${event.clientX},${event.clientY})`;
-                $("text.msgBox").text(msg);
-                $(this).css("fill", "yellow")
-            });
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email">
 
-            $("a").addClass("test");
-            $("p.p2").hide();
+    <hr>
 
-            $("p.p1").click(function (event) {
-                $(this).hide("slow");
-                $("p.p2").show("slow");
-            });
+    <p id="multipleEvent">Testing multiple event on this paragraph! (MouseEnter - Click -  MouseLeave)</p>
 
-            $("p.p2").click(function (event) {
-                $(this).hide("slow");
-                $("p.p1").show("slow");
-            });
+    <hr>
 
-
-        });
-
-    </script>
+    <p class="up">Slide down/up with a double click!</p>
+    <div class="down">I am down now!</div>
+    
 
 </body>
 
