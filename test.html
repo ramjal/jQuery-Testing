@@ -32,7 +32,8 @@
     
     <hr>
 
-    Name: <input type="text" name="fullname"><br>
+    Name: <input type="text" name="fullname"><span id="inputData"></span>
+    <br>
     Email: <input type="text" name="email">
 
     <hr>
@@ -43,6 +44,13 @@
 
     <p class="up">Slide down/up with a double click!</p>
     <div class="down">I am down now!</div>
+
+    <hr>
+
+    <button id="stopAnimate" style="visibility:hidden;margin-bottom:5px;position: relative;">Stop it!</button>
+    <div id="animate" style="background:#98bf21;height:70px;width:350px;padding:10px;position:absolute;">
+        Animation! Please click on me!
+    </div>
     
 
 </body>
